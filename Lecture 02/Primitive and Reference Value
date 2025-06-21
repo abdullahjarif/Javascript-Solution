@@ -1,1 +1,8 @@
+#Premative value
+1. string 
+2. int
+3. bool
 
+#Reference value
+5. array
+6. object
