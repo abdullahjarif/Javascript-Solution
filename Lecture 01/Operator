@@ -1,1 +1,5 @@
-
+# Operator
+1. arithmetic operators => +, -, *, /, %, ++, --
+2. assignment operators => =, +=, -=, *=, /=, %=
+3. comparison operators => ==, ===, !=, !==, <, >, <=, >=, ?
+4. logical operators => &&, ||, !
