@@ -41,4 +41,32 @@ const student = {
     y.name = "Noor Nadiya"; // for update name
     console.log(y);
     delete y.id;
-    
+
+    const car = {
+        type: "Sedan",
+        model: "Toyota",
+        year: 2020,
+        ownerDetails: function() {
+            console.log("Owner Details Here");
+        },
+        // nested object
+        owner: {
+            name: "John Doe",
+            age: 45,
+            address: "123 Main St"
+        },
+    };
+
+    console.log(car.type); 
+    console.log(car.model);
+    console.log(car.year);
+    car.ownerDetails(); // calling the ownerDetails function of car object
+
+    // Accessing nested object property
+    console.log(car.owner); 
+    console.log(car.owner.name); 
+    console.log(car.owner.age);
+    console.log(car.owner.address);
+
+
+    // document.getElementById("demo").innerHTML = y;
