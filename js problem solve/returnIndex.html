@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem solve</title>
+</head>
+<body>
+    <!-- Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. You can return the answer in any order. -->
+
+    <h1>Problem Solve</h1>
+    <script>
+      const nums = [2, 8, 7, 5, 11, 15, 20];
+
+      // const target = 13;
+      // const target = 15;
+      const target = 20;
+      
+      function twoSum(nums, target) {
+        const numMap = new Map();
+      
+        for(let i=0; i< nums.length; i++) {
+      
+          const returnValue = target - nums[i];
+      
+          // Check if the complement exists in the map
+          // If it exists, return the indices of the two numbers
+          if(numMap.has(returnValue)) {
+            return [numMap.get(returnValue), i];
+          }
+          numMap.set(nums[i], i);
+        }
+        return [];
+      }
+      console.log(twoSum(nums, target));
+      
+    </script>
+</body>
+</html>
