@@ -1,0 +1,99 @@
+/* Reset some default styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+div {
+    background: #fff;
+    padding: 2.5rem 2rem 2rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    min-width: 320px;
+}
+
+input.age {
+    padding: 0.7rem 1rem;
+    border: 1.5px solid #b2bec3;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input.age:focus {
+    border-color: #0984e3;
+    box-shadow: 0 0 0 2px #dff9fb;
+}
+
+#btn {
+    padding: 0.7rem 2.2rem;
+    background: linear-gradient(90deg, #0984e3 0%, #00b894 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(9, 132, 227, 0.08);
+}
+
+#btn:hover, #btn:focus {
+    background: linear-gradient(90deg, #00b894 0%, #0984e3 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.result {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    min-height: 2.2rem;
+    color: #222;
+    text-align: center;
+    transition: color 0.2s;
+}
+
+.result:empty {
+    min-height: 0;
+}
+
+.result:contains("eligible") {
+    color: #00b894;
+}
+
+.result:contains("not eligible") {
+    color: #d63031;
+}
+
+.result:contains("valid age") {
+    color: #e17055;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    div {
+        min-width: 90vw;
+        padding: 1.5rem 0.5rem 1.2rem 0.5rem;
+    }
+    .result {
+        font-size: 1.1rem;
+    }
+}
